@@ -5,8 +5,8 @@ permalink: "/project/"
 ---
 
 <div id="load-list">
-
-  {%for project in site.projects %}
+  {% assign items = site.projects | sort: 'date' %}
+  {%for project in items reversed %}
     {% include projectcard/merged.html project=project %}
   {%endfor%}
 
