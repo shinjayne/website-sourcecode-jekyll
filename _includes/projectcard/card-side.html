@@ -1,0 +1,24 @@
+<style>
+.card-side-info h1,h2,h3,h4,h5{
+  color: #f43e30;
+}
+</style>
+
+<div class="card-side-info d-block ml-3 mr-2">
+  <hr class="d-block d-sm-none" style="width:270px;"/>
+  <h5>Description</h5>
+  <p class="text-secondary"> {{include.project.description}} </p>
+  <div class="row justify-content-start">
+    <div class="col-6 col-lg-3">
+      <h5>Code</h5>
+      <a href="{{include.project.github}}"><button type="button" class="btn btn-outline-danger mb-3"><img src="/asset/media/image/GitHub-Mark-120px-plus.png" width="30" height="30" class="mr-2"/>github</button></a>
+    </div>
+    <div class="col-6 ">
+      <h5>Related Post</h5>
+      <a href="{{include.project.relatedpost}}"><button type="button" class="btn btn-outline-danger mb-3"><img src="/asset/media/image/logo.jpg" width="30" height="30" class="mr-2"/>post</button></a>
+    </div>
+  </div>
+
+  <h5 class="text-secondary">Progress</h5>
+  {%include projectprogress.html %}
+</div>

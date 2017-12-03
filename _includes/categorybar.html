@@ -1,0 +1,13 @@
+<style>
+.nav-link{
+  color: 3d5a78;
+}
+</style>
+
+<nav class="nav nav-pills nav-fill bg-lite font-weight-bold">
+  <a class="nav-item nav-link text-uppercase" href="/post/" id="categorybar_">All</a>
+  {% for category in site.data.categories %}
+    <a class="nav-item nav-link text-uppercase" href="/post/{{category.name}}" id="categorybar_{{category.name}}">{{category.name}}</a>
+  {% endfor %}
+</nav>
+<hr />

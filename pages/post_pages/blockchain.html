@@ -1,0 +1,15 @@
+---
+layout: postpage
+title : blockchain
+permalink : "/post/blockchain"
+---
+<div id="load-list">
+
+  {%for post in site.categories.blockchain %}
+  <div id="load-thing" class="load-thing">
+    {% include postcard.html post=post %}
+  </div>
+  {%endfor%}
+
+</div>
+{% include morebutton.html %}

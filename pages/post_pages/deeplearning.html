@@ -1,0 +1,15 @@
+---
+layout: postpage
+title : deeplearning
+permalink : "/post/deeplearning"
+---
+<div id="load-list">
+
+  {%for post in site.categories.deeplearning %}
+  <div id="load-thing" class="load-thing">
+    {% include postcard.html post=post %}
+  </div>
+  {%endfor%}
+
+</div>
+{% include morebutton.html %}

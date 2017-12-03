@@ -1,0 +1,15 @@
+---
+layout: projectpage
+title: Projects
+permalink: "/project/"
+---
+
+<div id="load-list">
+
+  {%for project in site.projects %}
+    {% include projectcard/merged.html project=project %}
+  {%endfor%}
+
+</div>
+
+{% include morebutton.html %}
