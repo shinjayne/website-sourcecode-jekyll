@@ -1,0 +1,14 @@
+<div class="row mx-auto">
+  <div class="col d-none d-md-inline"></div>
+  <div class="col">
+    <img src="/asset/media/image/profilephoto.JPG" class="d-block mx-auto" style="width:13rem; border-radius:10rem"/>
+  </div>
+  <div class="col">
+    <div class="list-group mt-3 mx-auto" style="width:290px;">
+      {%for d in site.data.jayneshin%}
+      <p class="list-group-item list-group-item-action text-muted"><img src="{{d.iconurl}}" class="mr-3" width=25/>  {{d.content}}</p>
+      {%endfor%}
+    </div>
+  </div>
+  <div class="col d-none d-md-inline"></div>
+</div>

@@ -3,13 +3,17 @@ layout: profilepage
 title: Profile
 permalink: "/profile/"
 ---
+<div class="container">
 
-This is who page.
-<ol>
-  <li>
-      My 명함 will be here.
-  </li>
-  <li>
-      My skillset will be introduced.
-  </li>
-</ol>
+  <h3 class="mb-3 mt-5 text-center">Jayne Shin</h3>
+  {% include profile/jayneshin.html %}
+  <h3 class="mb-5 mt-5 text-center">Career</h3>
+  {% include profile/career.html %}
+  <h3 class="mb-5 mt-5 text-center">Projects</h3>
+  {%include profile/projects.html%}
+  <h3 class="mb-5 mt-5 text-center">Reads</h3>
+  {% include profile/books.html %}
+  <h3 class="mb-5 mt-5 text-center">Lectures in University</h3>
+  {% include profile/lectures.html %}
+
+</div>

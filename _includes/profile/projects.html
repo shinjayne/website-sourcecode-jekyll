@@ -1,0 +1,7 @@
+<div class="d-block mx-auto" style="max-width:300px">
+  {% assign items = site.projects | sort: 'date' %}
+  {%for p in items reversed %}
+  <img src="{{p.mainpic}}" style="width:70px;height:70px;border-radius:35px;" />
+  {%endfor%}
+  <a href="/project"><button class="btn btn-outline-danger d-block mx-auto mt-3 mb-5">See all projects</button></a>
+</div>

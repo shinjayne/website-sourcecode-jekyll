@@ -1,0 +1,14 @@
+<div class="row">
+    {% for book in site.data.books reversed %}
+    <div class="col">
+      <div class="card mb-3 mx-auto" style="max-width:150px; min-width:120px;">
+        <img class="card-img-top" src="{{book.imgurl}}" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">{{book.title}}<p/>
+          <p class="card-text"><small class="text-muted">{{book.subtitle}}</small></p>
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+
+</div>
