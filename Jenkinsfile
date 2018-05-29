@@ -6,5 +6,10 @@ pipeline {
         sh 'ls'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'bundle exec jekyll build'
+      }
+    }
   }
 }
