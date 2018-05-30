@@ -8,7 +8,8 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'bundle exec jekyll build'
+        sh '''bundle install
+bundle exec jekyll build'''
       }
     }
   }
