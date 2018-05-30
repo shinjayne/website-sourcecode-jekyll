@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Initialize') {
+    stage('Check') {
       steps {
         sh 'ls'
       }
@@ -10,6 +10,11 @@ pipeline {
       steps {
         sh '''bundle install
 bundle exec jekyll build'''
+      }
+    }
+    stage('Deploy') {
+      steps {
+        git(url: 'https://github.com/shinjayne/shinjayne.github.io.git', branch: 'master')
       }
     }
   }
