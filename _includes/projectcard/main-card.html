@@ -20,13 +20,15 @@
 </style>
 
 
-<div class="card mx-auto text-center">
-  <div class="card-header">Project</div>
-  <div class="card-body" style="background-image:url('{{include.project.mainpic}}');">
-    <a href="{{include.project.url}}"><h1 class="card-title text-white" style="font-size : 1.8rem;">{{include.project.title}}</h1></a>
+<div class="card mx-auto text-center jaynewho-shadow-effect">
+  <!-- <div class="card-header" style="height: 40px;">{{include.project.date | date_to_long_string}}</div> -->
+  <div class="card-body" style="background-image:url('{{include.project.mainpic}}'); border-radius: 5px;">
+    <!-- <a href="{{include.project.url}}"> -->
+      <h1 class="card-title text-white" style="font-size : 1.4rem;">{{include.project.title}}</h1>
+    <!-- </a> -->
     <!---p class="card-text text-secondary">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p-->
     <p class="card-text text-white">
-      <p class="text-muted">{{include.project.categories}} | {{include.project.date | date_to_long_string}}</p>
+      <p class="text-muted">{{include.project.categories}}</p>
     </p>
     <p class="card-text text-white">
       Tags |
