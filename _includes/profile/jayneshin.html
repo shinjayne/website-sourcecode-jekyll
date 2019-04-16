@@ -6,7 +6,13 @@
   <div class="col">
     <div class="list-group mt-3 mx-auto" style="width:290px;">
       {%for d in site.data.jayneshin%}
+      {%if d.link%}
+      <a href="{{d.link}}">
+        {%endif%}
       <p class="list-group-item list-group-item-action text-muted"><img src="{{d.iconurl}}" class="mr-3" width=25/>  {{d.content}}</p>
+      {%if d.link%}
+    </a>
+      {%endif%}
       {%endfor%}
     </div>
   </div>

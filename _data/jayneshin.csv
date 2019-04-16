@@ -1,5 +1,6 @@
-title,content,iconurl
-school,Seoul National University,/asset/media/image/icons/school.png
-birth,1996-10-29,/asset/media/image/icons/cake.png
-favorite,Backend & Infra & DevOps,/asset/media/image/icons/favorite.png
-mail,shinjayne@gmail.com,/asset/media/image/icons/mail.png
+title,content,iconurl,link
+school,Seoul National University,/asset/media/image/icons/school.png,
+birth,1996-10-29,/asset/media/image/icons/cake.png,
+favorite,Backend & Infra & DevOps,/asset/media/image/icons/favorite.png,
+mail,shinjayne@gmail.com,/asset/media/image/icons/mail.png,
+github,@shinjayne,/asset/media/image/icons/github.png,https://github.com/shinjayne

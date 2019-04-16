@@ -1,8 +1,9 @@
-<div class="text-center">
+<div style="display:flex; justify-content: center;">
+  <div>
   {%for c in site.data.career%}
   <p>
-    {{c.date}} | {{c.content}}
+    <span class="badge badge-dark">{{c.date}}</span>  {{c.content}}
   </p>
   {%endfor%}
-
+</div>
 </div>
