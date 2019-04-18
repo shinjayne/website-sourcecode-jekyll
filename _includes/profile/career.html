@@ -1,9 +1,9 @@
 <div style="display:flex; justify-content: center;">
   <div>
-  {%for c in site.data.career%}
+  {% for c in site.data.career reversed %}
   <p>
     <span class="badge badge-dark">{{c.date}}</span>  {{c.content}}
   </p>
-  {%endfor%}
+  {% endfor %}
 </div>
 </div>
