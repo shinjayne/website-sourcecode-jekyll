@@ -10,12 +10,29 @@ layout : base
     .card-text .badge {
         font-family: "Noto Sans Korean", sans-serif;
     }
+
+    /**
+    Post Font Style
+    */
     .post {
 
-        font-family: 'Chosunilbo_myungjo', "Noto Sans Korean", sans-serif;
+        font-family:  'Chosunilbo_myungjo', "Noto Sans Korean", sans-serif;
         letter-spacing: -0.004em;
         line-height: 1.58;
         font-size: 17px;
+    }
+    /*for every text in different line
+    문단간격
+    */
+    
+    p {
+        margin-bottom: 17px;
+    }
+    /**
+     강조 텍스트 
+    */
+    p strong {
+        background-color: #d6e8fb;
     }
 
     /*post titles style*/
@@ -27,6 +44,7 @@ layout : base
     h5,
     h6 {
         font-weight: 700;
+        color: #213b80;
     }
     
     .post h1 {
@@ -34,32 +52,31 @@ layout : base
         margin-top: 4.5rem;
         padding-bottom: 10px;
         margin-bottom: 1rem;
-        color: #213b80;
         border-bottom: 1px solid #213b8026;
     }
     
     .post h2 {
         font-size: 1.4rem;
         margin-top: 3rem;
-        color: #213b80;
+    
     }
     
     .post h3 {
         font-size: 1.2rem;
         margin-top: 2rem;
-        color: #213b80;
+    
     }
     
     .post h4 {
         font-size: 1.0rem;
         margin-top: 2rem;
-        color: #213b80;
+
     }
     
     .post h5 {
         font-size: 0.9rem;
         margin-top: 1.5rem;
-        color: #213b80;
+    
     }
     
     /*for image*/
@@ -82,11 +99,7 @@ layout : base
         padding: 10px;
         /* color : #d0d7de; */
     }
-    /*for every text in different line*/
-    
-    p {
-        margin-bottom: 8px;
-    }
+
     /*Table Form*/
     
     th {
@@ -95,11 +108,10 @@ layout : base
     /*blockquote*/
     
     blockquote {
-        background-color: #8080801c;
-        padding: 15px;
+        /* background-color: #8080801c; */
+        padding: 18px;
+        border-left: 1px solid #000000a6;
         color: #000000a6;
-        font-size: 0.9rem;
-        font-weight: 300;
     }
 
     /**
@@ -109,6 +121,9 @@ layout : base
     @media (max-width: 728px)  {
         .post {
             font-size: 15px;    
+        }
+        .p {
+            margin-bottom: 15px;
         }
         .post h1 {
             font-size: 21px;
