@@ -1,67 +1,153 @@
----
-layout : base
+--- 
+layout : base 
 ---
 
 <style>
-/*post titles style*/
-.post h1,h2,h3,h4,h5,h6 {
-  font-weight: 700;
-}
-.post h1 {font-size: 1.7rem;margin-top: 4.5rem; padding-bottom: 10px; margin-bottom:1rem;  color:#213b80; border-bottom: 1px solid #213b8026;}
-.post h2 {font-size: 1.4rem;margin-top: 3rem; color:#213b80;}
-.post h3 {font-size: 1.2rem;margin-top: 2rem;  color:#213b80;}
-.post h4 {font-size: 1.0rem;margin-top: 2rem; color:#213b80;}
-.post h5 {font-size: 0.9rem;margin-top: 1.5rem;  color:#213b80;}
-/*for image*/
-.post img {
-  max-width: 100%;
-  height: auto;
-  margin-top : 2rem ;
-  margin-bottom : 2rem;
-  border-radius: 5px;
-  box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.18);
-}
+/** title design */
+    .card-title, .card-text, .text-muted {
+        font-family: 'Arita-buri-SemiBold','Chosunilbo_myungjo', "Noto Sans Korean", sans-serif;
+    }
+    .card-text .badge {
+        font-family: "Noto Sans Korean", sans-serif;
+    }
+    .post {
 
-/*for code highlighter*/
-pre {
-  background-color: #dddddd8c ;
-  border-radius: 6px;
-  padding: 10px;
-  /* color : #d0d7de; */
-}
+        font-family: 'Chosunilbo_myungjo', "Noto Sans Korean", sans-serif;
+        letter-spacing: -0.004em;
+        line-height: 1.58;
+        font-size: 17px;
+    }
 
-/*for every text in different line*/
-p {
-  margin-bottom: 8px;
-}
+    /*post titles style*/
+    
+    .post h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+    }
+    
+    .post h1 {
+        font-size: 1.6rem;
+        margin-top: 4.5rem;
+        padding-bottom: 10px;
+        margin-bottom: 1rem;
+        color: #213b80;
+        border-bottom: 1px solid #213b8026;
+    }
+    
+    .post h2 {
+        font-size: 1.4rem;
+        margin-top: 3rem;
+        color: #213b80;
+    }
+    
+    .post h3 {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        color: #213b80;
+    }
+    
+    .post h4 {
+        font-size: 1.0rem;
+        margin-top: 2rem;
+        color: #213b80;
+    }
+    
+    .post h5 {
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+        color: #213b80;
+    }
+    
+    /*for image*/
+    .post img {
+        width: 76%;
+        max-width: 100%;
+        height: auto;
+        margin-left: 12%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.18);
+    }
+    /*for code highlighter*/
+    
+    pre {
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        border-radius: 6px;
+        padding: 10px;
+        /* color : #d0d7de; */
+    }
+    /*for every text in different line*/
+    
+    p {
+        margin-bottom: 8px;
+    }
+    /*Table Form*/
+    
+    th {
+        white-space: nowrap;
+    }
+    /*blockquote*/
+    
+    blockquote {
+        background-color: #8080801c;
+        padding: 15px;
+        color: #000000a6;
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
 
-/*Table Form*/
-th{
-  white-space: nowrap;
-}
+    /**
+    for mobile design 
+    */
 
-/*blockquote*/
-blockquote{
-  background-color: #8080801c;
-  padding: 15px;
-  color: #000000a6;
-  font-size: 0.9rem;
-  font-weight: 300;  
-}
+    @media (max-width: 728px)  {
+        .post {
+            font-size: 15px;    
+        }
+        .post h1 {
+            font-size: 21px;
+        }
+                .post h2 {
+            font-size: 19px;
+        }
+                .post h3 {
+            font-size: 18px;
+        }
+                .post h4 {
+            font-size: 17px;
+        }
+                .post h5 {
+            font-size: 16px;
+        }
+        .post img {
+            width: 100%;
+            max-width: 100%;
+            margin-left:0;
+        }
 
+        
+    }
 </style>
 
 <div class="container-fluid text-center pt-3" style="background-image : url('{{page.mainpic}}');  background-color: #00010299; background-blend-mode: color; background-size: cover; min-height: 350px;">
-  <a href="/post/"><p class="text-left md-5"><button type="button" class="btn btn-outline-secondary btn-sm d-inline text-uppercase"> < Back </button></p></a>
-  <h1 class="card-title text-white" style="font-size : 2.2rem;">{{page.title}}</h1>
-  <p class="card-text text-white"><p class="text-muted">{{page.categories}} | {{page.date | date_to_long_string}}</p></p>
-  <p class="card-text text-white">
-    Tags |
-    {%for tag in page.tags %}
-    <a href="#" class="badge badge-primary">{{tag}}</a>
-    {%endfor%}
-  </p>
+    <a href="/post/">
+        <p class="text-left md-5"><button type="button" class="btn btn-outline-secondary btn-sm d-inline text-uppercase"> < Back </button></p>
+    </a>
+    <h1 class="card-title text-white" style="font-size : 2.2rem;">{{page.title}}</h1>
+    <p class="card-text text-white">
+        <p class="text-muted">{{page.categories}} | {{page.date | date_to_long_string}}</p>
+    </p>
+    <p class="card-text text-white">
+        Tags | {%for tag in page.tags %}
+        <a href="#" class="badge badge-primary">{{tag}}</a> {%endfor%}
+    </p>
 </div>
 
 
-<div class="post container pt-5 " style = "max-width : 750px">{{content}}</div>
+<div class="post container pt-5 " style="max-width : 750px">{{content}}</div>
