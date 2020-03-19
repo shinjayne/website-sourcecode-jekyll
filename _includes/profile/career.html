@@ -1,9 +1,13 @@
 <div style="display:flex; justify-content: center;">
   <div>
   {% for c in site.data.career reversed %}
-  <p>
-    <span class="badge badge-dark">{{c.date}}</span>  {{c.content}}
-  </p>
+    {% if c.current %}
+    <p class="list-group-item" style="background-color: #f4f0ff;"><span class="badge badge-dark mr-3" style="background-color: #924c92;">{{c.date}}</span>  {{c.content}}</p>
+    {% else %}
+    <p class="list-group-item"><span class="badge badge-dark mr-3">{{c.date}}</span>  {{c.content}}</p>
+    
+    {% endif %}
+  
   {% endfor %}
 </div>
 </div>
